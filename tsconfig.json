@@ -14,7 +14,8 @@
     "noUnusedLocals": true,
     "forceConsistentCasingInFileNames": true,
     "types": [
-      "vite/client"
+      "vite/client",
+      "onu-ui/volar"
     ],
     "paths": {
       "~/*": ["src/*"]

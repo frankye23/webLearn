@@ -17,7 +17,9 @@
       <span class="opacity-50">Storage:</span> {{ storageDemo }}
     </div> -->
     <div>
-      123123
+      <o-button type="primary">
+        Primary
+      </o-button>
     </div>
-</main>
+  </main>
 </template>

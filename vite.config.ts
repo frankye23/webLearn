@@ -1,6 +1,8 @@
 /// <reference types="vitest" />
 
 import { dirname, relative } from 'node:path'
+import { OnuResolver } from 'onu-ui'
+
 import type { UserConfig } from 'vite'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
@@ -36,6 +38,7 @@ export const sharedConfig: UserConfig = {
         },
       ],
       dts: r('src/auto-imports.d.ts'),
+      resolvers: [OnuResolver()],
     }),
 
     // https://github.com/antfu/unplugin-vue-components
@@ -48,6 +51,7 @@ export const sharedConfig: UserConfig = {
         IconsResolver({
           componentPrefix: '',
         }),
+        OnuResolver(),
       ],
     }),
 
