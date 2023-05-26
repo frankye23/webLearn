@@ -5,7 +5,7 @@
       <div class="font-bold text-lg flex items-end">
         Instant Chat
         <p class="text-gray text-sm ml-1 font-medium pb-1">
-          v 0.0.1
+          v0.0.1
         </p>
       </div>
     </div>
