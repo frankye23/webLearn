@@ -1,10 +1,17 @@
 <script setup lang="ts">
+import { reactive } from 'vue'
+// import { sendRequest } from '~/utils/request'
+
+const state = reactive({
+  message: '',
+  response: '',
+})
 // import { storageDemo } from '~/logic/storage'
 
 // function openOptionsPage() {
 //   browser.runtime.openOptionsPage()
 // }
-function sendMessage() {
+async function sendMessage() {
 
 }
 </script>
@@ -15,8 +22,8 @@ function sendMessage() {
     <Chat />
     <!-- input -->
     <div class="relative mt-12 rounded-md shadow-sm">
-      <input type="text" class="block w-full rounded-md border-0 py-1.5 pr-10 pl-4 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6" placeholder="Send your message...">
-      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+      <input v-model="state.message" type="text" class="block w-full rounded-md border-0 py-1.5 pr-10 pl-4 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6" placeholder="Send your message...">
+      <div class="absolute inset-y-0 right-0 flex items-center pr-3">
         <icon-park-outline:send-one class="cursor-pointer h-5 w-5 text-gray-400" aria-hidden="true" @click="sendMessage" />
       </div>
     </div>
